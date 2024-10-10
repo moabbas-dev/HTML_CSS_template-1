@@ -1,0 +1,226 @@
+/* Global Rules */
+:root {
+	--main-color: #10cab7;
+}
+
+* {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+body {
+	font-family: "Work Sans", sans-serif;
+}
+
+.container {
+	margin: 0 auto 0 auto;
+	padding: 0 15px 0 15px;
+}
+
+/* Small Screens */
+@media (min-width: 768px) {
+	.container {
+		width: 750px;
+	}
+}
+
+/* Medium Screens */
+@media (min-width: 992px) {
+	.container {
+		width: 970px;
+	}
+}
+
+/* Large Screens */
+@media (min-width: 1200px) {
+	.container {
+		width: 1170px;
+	}
+}
+
+/* Special Heading */
+.special-heading {
+	font-size: 100px;
+    color: #ebeced;
+    margin: 0;
+    letter-spacing: -2px;
+	text-align: center;
+}
+
+.special-heading + p {
+	text-align: center;
+    margin-top: -35px;
+    color: gray;
+	font-size: 17px;
+}
+
+/* End Global Rules */
+
+header {
+	padding:0 20px 0 20px;
+	/* position: fixed;
+	top: 0; */
+}
+
+header .links {
+    position: relative;
+}
+
+header .logo {
+    width: 60px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+header .links {
+    position: relative;
+}
+
+header .links .icon {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 30px;
+}
+
+header .links:hover  {
+    cursor:pointer;
+}
+
+header .links:hover .icon span:nth-child(2) {
+    width: 100%;
+}
+
+header .links .icon span {
+    width: 100%;
+    margin-bottom: 5px;
+    height: 2px;
+    background: #333;
+}
+
+header .links .icon span:nth-child(2) {
+    width: 60%;
+    transition: 0.1s;
+}
+
+header .links ul {
+	display: none;
+	background-color: #f6f6f6;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	position: absolute;
+	right: 0;
+	top: calc(100% + 15px);
+	min-width: 200px;
+	z-index: 9999;
+	margin-top: 6px;
+}
+
+header .links ul::before {
+	content: "";
+	border-width: 15px;
+    border-style: solid;
+    border-color: transparent transparent gray transparent;
+    position: absolute;
+    right: 0;
+    top: -30px;
+}
+
+header .links ul::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 50px;
+	top: -30px;
+	background-color: transparent;
+}
+
+header .links ul li:not(:last-child) {
+	border-bottom: 1px solid rgb(172, 167, 167);
+}
+
+header .links ul li a {
+	color: rgb(41, 40, 40);
+	text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+header .links:hover > ul {
+	display: block;
+}
+
+header .links ul li{
+	transition: 0.2s;
+}
+
+header .links ul li:hover{
+	padding-left: 15px;
+	background-color: #bbb;
+}
+
+.landing {
+	background-image: url("../images/mountain.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: calc(100vh - 64px);
+	margin-top: 20px;
+	position: relative;
+}
+
+.landing .intro-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	width: 320px;
+}
+
+.landing .intro-text h1 {
+	margin: 0;
+	color: var(--main-color);
+	font-size: 50px;
+}
+
+.landing .intro-text p {
+	font-size: 16px;
+}
+
+.features {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	background-color: #f6f6f6;
+}
+
+.features .container {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 30px;
+}
+
+.features .feat {
+	text-align: center;
+}
+
+.features .feat i {
+	color: var(--main-color);
+}
+
+.features .feat h3 {
+	font-weight: 800;
+	font-size: 24px;
+}
+
+.features .feat p {
+	line-height: 1.8;
+	font-size: 17px;
+}

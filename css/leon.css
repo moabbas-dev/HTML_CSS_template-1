@@ -50,9 +50,20 @@ body {
 	text-align: center;
 }
 
+.special-heading + p {
+	text-align: center;
+    margin-top: -35px;
+    color: gray;
+	font-size: 17px;
+}
+
 @media (max-width: 768px) {
 	.special-heading {
 		font-size: 70px;
+	}
+
+	.special-heading + p {
+		margin-top: -30px;
 	}
 }
 
@@ -60,14 +71,12 @@ body {
 	.special-heading {
 		font-size: 70px;
 	}
+	
+	.special-heading + p {
+		margin-top: -30px;
+	}
 }
 
-.special-heading + p {
-	text-align: center;
-    margin-top: -35px;
-    color: gray;
-	font-size: 17px;
-}
 /* End Global Rules */
 
 header {
